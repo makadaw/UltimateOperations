@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UltimateOperationsTests/UltimateOperationsTests.m"
+            timestampString = "540340124.71623"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-testSecondOperationCancellation"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__58-[UltimateOperationsTests testSecondOperationCancellation]_block_invoke_2.29"
+                  moduleName = "UltimateOperationsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MainUser/Projects/UltimateOperations/UltimateOperationsTests/UltimateOperationsTests.m"
+                  timestampString = "540340125.237262"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__58-[UltimateOperationsTests testSecondOperationCancellation]_block_invoke_2.29"
+                  moduleName = "UltimateOperationsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MainUser/Projects/UltimateOperations/UltimateOperationsTests/UltimateOperationsTests.m"
+                  timestampString = "540340125.240592"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "467">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__58-[UltimateOperationsTests testSecondOperationCancellation]_block_invoke_2.29"
+                  moduleName = "UltimateOperationsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MainUser/Projects/UltimateOperations/UltimateOperationsTests/UltimateOperationsTests.m"
+                  timestampString = "540340125.2437609"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "521">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__58-[UltimateOperationsTests testSecondOperationCancellation]_block_invoke_2.29"
+                  moduleName = "UltimateOperationsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MainUser/Projects/UltimateOperations/UltimateOperationsTests/UltimateOperationsTests.m"
+                  timestampString = "540340125.247076"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "630">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UltimateOperationsTests/UltimateOperationsTests.m"
+            timestampString = "540340124.716616"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "UltimateOperationsTests"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UltimateOperationsTests testSecondOperationCancellation]"
+                  moduleName = "UltimateOperationsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MainUser/Projects/UltimateOperations/UltimateOperationsTests/UltimateOperationsTests.m"
+                  timestampString = "540340125.251518"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "970">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UltimateOperationsTests testSecondOperationCancellation]"
+                  moduleName = "UltimateOperationsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MainUser/Projects/UltimateOperations/UltimateOperationsTests/UltimateOperationsTests.m"
+                  timestampString = "540340125.256085"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "1011">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UltimateOperationsTests testSecondOperationCancellation]"
+                  moduleName = "UltimateOperationsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MainUser/Projects/UltimateOperations/UltimateOperationsTests/UltimateOperationsTests.m"
+                  timestampString = "540340125.259733"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "1751">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UltimateOperationsTests testSecondOperationCancellation]"
+                  moduleName = "UltimateOperationsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MainUser/Projects/UltimateOperations/UltimateOperationsTests/UltimateOperationsTests.m"
+                  timestampString = "540340125.264026"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "1939">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UltimateOperationsTests testSecondOperationCancellation]"
+                  moduleName = "UltimateOperationsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MainUser/Projects/UltimateOperations/UltimateOperationsTests/UltimateOperationsTests.m"
+                  timestampString = "540340125.2677799"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "2057">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
