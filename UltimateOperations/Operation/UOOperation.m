@@ -116,28 +116,18 @@ static NSString *PropertyNameFromUOOperationState(UOOperationState state) {
     return operationCancelled;
 }
 
-#define BOOL_LOCK_READING(block){ \
-BOOL result; \
-pthread_rwlock_rdlock(&self->_lock); \
-result = block;\
-pthread_rwlock_unlock(&self->_lock);\
-return result;\
+#define BOOL_LOCK_READING(name, expression) \
+- (BOOL)name { \
+    BOOL name; \
+    pthread_rwlock_rdlock(&_lock); \
+    name = expression;\
+    pthread_rwlock_unlock(&_lock);\
+    return name;\
 }
 
-- (BOOL)isReady {
-    BOOL_LOCK_READING(self.state == UOOperationStateReady && [super isReady])
-}
-
-- (BOOL)isExecuting {
-    BOOL_LOCK_READING(self.state == UOOperationStateExecuting)
-}
-
-- (BOOL)isFinished {
-    BOOL_LOCK_READING(self.state == UOOperationStateFinished)
-}
-
-- (BOOL)isCancelled {
-    BOOL_LOCK_READING(_operationCancelled)
-}
+BOOL_LOCK_READING(isReady, self.state == UOOperationStateReady && [super isReady])
+BOOL_LOCK_READING(isExecuting, self.state == UOOperationStateExecuting)
+BOOL_LOCK_READING(isFinished, self.state == UOOperationStateFinished)
+BOOL_LOCK_READING(isCancelled, _operationCancelled)
 
 @end
