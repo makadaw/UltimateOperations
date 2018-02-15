@@ -34,21 +34,18 @@
     __block int count = 0;
     XCTestExpectation *exp = [self expectationWithDescription:@"First operation"];
     UOBlockOperation *op1 = [[UOBlockOperation alloc] initWithBlock:^{
-        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            sleep(2);
-            count++;
-            [exp fulfill];
-        });
+        sleep(2);
+        count++;
+        [exp fulfill];
     }];
     [self.queue addOperation:op1];
     UOBlockOperation *op2 = [[UOBlockOperation alloc] initWithBlock:^{
-        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            sleep(5);
-            count++;
-            XCTAssert(NO, @"Second operation also executed");
-        });
+        sleep(5);
+        count++;
+        XCTAssert(NO, @"Second operation also executed");
     }];
     [self.queue addOperation:op2];
+    sleep(1);
     [self.queue cancelAllOperations];
     [self waitForExpectations:@[exp] timeout:10];
     

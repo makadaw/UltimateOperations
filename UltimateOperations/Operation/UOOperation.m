@@ -28,12 +28,10 @@ static NSString *PropertyNameFromUOOperationState(UOOperationState state) {
     pthread_rwlock_t _lock;
 }
 @property (nonatomic) UOOperationState state;
-@property (nonatomic, getter=isOperationCancelled) BOOL operationCancelled;
 
 @end
 
 @implementation UOOperation
-@synthesize operationCancelled=_operationCancelled;
 
 - (instancetype)init {
     if ((self = [super init])) {
@@ -73,18 +71,18 @@ static NSString *PropertyNameFromUOOperationState(UOOperationState state) {
 }
 
 - (void)cancel {
+    pthread_rwlock_wrlock(&_lock);
     [super cancel];
-    // TODO use one write lock instead two
-    self.operationCancelled = YES;
+    pthread_rwlock_unlock(&_lock);
 }
 
 - (void)setState:(UOOperationState)state {
-    pthread_rwlock_wrlock(&self->_lock);
+    pthread_rwlock_wrlock(&_lock);
     
     //TODO check is valid transiction
     if (_state != state
         && state > _state
-        && (!_operationCancelled || (_operationCancelled && state == UOOperationStateFinished))) {
+        && (!self.isCancelled || (self.isCancelled && state == UOOperationStateFinished))) {
         NSString *oldStateKey = PropertyNameFromUOOperationState(_state);
         NSString *newStateKey = PropertyNameFromUOOperationState(state);
         
@@ -95,25 +93,7 @@ static NSString *PropertyNameFromUOOperationState(UOOperationState state) {
         [self didChangeValueForKey:oldStateKey];
     }
     
-    pthread_rwlock_unlock(&self->_lock);
-}
-
-- (void)setOperationCancelled:(BOOL)operationCancelled {
-    pthread_rwlock_wrlock(&self->_lock);
-    if (_operationCancelled != operationCancelled) {
-        [self willChangeValueForKey:@"isCancelled"];
-        _operationCancelled = operationCancelled;
-        [self didChangeValueForKey:@"isCancelled"];
-    }
-    pthread_rwlock_unlock(&self->_lock);
-}
-
-- (BOOL)isOperationCancelled {
-    BOOL operationCancelled;
-    pthread_rwlock_rdlock(&self->_lock);
-    operationCancelled = _operationCancelled;
-    pthread_rwlock_unlock(&self->_lock);
-    return operationCancelled;
+    pthread_rwlock_unlock(&_lock);
 }
 
 #define BOOL_LOCK_READING(name, expression) \
@@ -128,6 +108,6 @@ static NSString *PropertyNameFromUOOperationState(UOOperationState state) {
 BOOL_LOCK_READING(isReady, self.state == UOOperationStateReady && [super isReady])
 BOOL_LOCK_READING(isExecuting, self.state == UOOperationStateExecuting)
 BOOL_LOCK_READING(isFinished, self.state == UOOperationStateFinished)
-BOOL_LOCK_READING(isCancelled, _operationCancelled)
+BOOL_LOCK_READING(isCancelled, [super isCancelled])
 
 @end
